@@ -1,6 +1,6 @@
 # music
 
-> An electron-vue music depend on NeteaseCloudMusicApi
+> A Music software based on Electron-vue, API provided by NeteaseCloudMusicApi
 
 #### Build Setup
 

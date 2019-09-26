@@ -2,7 +2,7 @@
   "name": "music",
   "version": "0.0.1",
   "author": "Heternally <Heternally@163.com>",
-  "description": "An electron-vue music depend on NeteaseCloudMusicApi",
+  "description": "A Music software based on Electron-vue, API provided by NeteaseCloudMusicApi",
   "license": null,
   "main": "./dist/electron/main.js",
   "scripts": {
