@@ -1,15 +1,13 @@
 <template>
-  <div id="home">
-    <div class="main">
-      home
-    </div>
+  <div id="friends">
+    friends
   </div>
 </template>
 
 <script>
 
 export default {
-  name: 'home',
+  name: 'friends',
   data() {
     return {
 
