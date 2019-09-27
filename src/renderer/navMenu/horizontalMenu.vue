@@ -1,88 +1,120 @@
 <template>
     <div id="horizontal">
-        <i :style="historyList.length > 0 ? 'opacity:1' : 'opacity:0.2'" class="el-icon-arrow-left" @click="historyClick"></i>
-        <i :style="historyList.length > 0 ? 'opacity:1' : 'opacity:0.2'" class="el-icon-arrow-right" @click="historyClick"></i>
-        <router-link :to="item.href" v-for="(item, index) in Menus" :key="index">{{item.title}}</router-link>
-        <div>{{historyList}}</div>
+      <div class="historyButton">
+        <i class="el-icon-arrow-left" @click="historyClick(true)"></i>
+        <i class="el-icon-arrow-right" @click="historyClick(false)"></i>
+      </div>
+      <div class="searchInput">
+        <el-input
+          placeholder="搜索"
+          prefix-icon="el-icon-search"
+          v-model="keywords">
+        </el-input>
+      </div>
+      <i class="el-icon-setting"></i>
+      <i class="el-icon-message"></i>
+      <i class="el-icon-brush"></i>
+      <i class="el-icon-copy-document"></i>
     </div>
 </template>
 
 <script>
-import { mapState } from 'vuex';
+import { mapState, mapActions } from 'vuex';
 export default {
   name: 'horizontal-menu',
   data() {
     return {
+      keywords: '',
     };
   },
-  props: {
-    Menus: {
-      type: Array,
-      default() {
-        return [
-          {
-            title: '个性推荐',
-            href: '/home',
-          },
-          {
-            title: '歌单',
-            href: '/songList',
-          },
-          {
-            title: '主播电台',
-            href: '/radio',
-          },
-          {
-            title: '排行榜',
-            href: '/rankingList',
-          },
-          {
-            title: '歌手',
-            href: '/singer',
-          },
-          {
-            title: '最新音乐',
-            href: '/newMusic',
-          },
-        ];
-      },
-    },
-  },
   methods: {
-    historyClick() {
-      console.log(this.historyList);// eslint-disable-line
-    //   this.$router.go(-1);
+    ...mapActions('histroyRouter', {
+      changeAsyncBack: 'changeAsyncBack',
+      changeAsyncNext: 'changeAsyncNext',
+      changeAsyncGo: 'changeAsyncGo',
+    }),
+    historyClick(back) {
+      const vw = this;
+      if (back) {
+        // vw.$router.go(-1);
+        vw.$router.back();
+      } else if (!back) {
+        // vw.$router.go(1);
+        vw.$router.forward();
+      }
     },
   },
   computed: {
     // ...mapState({
     //   historyList: state => state.histroyRouter.historyList,
     // }),
-    ...mapState('histroyRouter', ['historyList']),
+    ...mapState('histroyRouter', ['historyList', 'canBack', 'canNext']),
+  },
+  components: {
   },
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
     #horizontal {
+        box-sizing: border-box;
         position: fixed;
         top: 0;
         left: 0;
         display: flex;
-        width:100%;
-        height:50px;
+        width: 100%;
+        height: 50px;
         align-items: center;
         background: linear-gradient(#f9f9f9,#f5f5f5);
-        padding-left:200px;
+        padding-left: 200px;
         -webkit-app-region: drag;
         z-index: 2;
-        a {
-            color:#646464;
-            text-decoration: none;
-            font-weight: 600;
-            &:hover {
-                color:#000;
+        .historyButton {
+          position: absolute;
+          left: 150px;
+        }
+        .searchInput {
+          position: absolute;
+          width: 150px;
+          height: 25px;
+          right: 163px;
+          top: 25px;
+          transform: translateY(-50%);
+          .el-input {
+            input {
+              height: 25px !important;
+              line-height: 25px !important;
+              border-radius: 25px;
             }
+            .el-icon-search {
+              line-height: 25px !important;
+              color: #000;
+            }
+          }
+        }
+        .el-icon-setting {
+          position: absolute;
+          right: 124px;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+        .el-icon-message {
+          position: absolute;
+          right: 85px;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+        .el-icon-brush {
+          position: absolute;
+          right: 49px;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+        .el-icon-copy-document {
+          position: absolute;
+          right: 18px;
+          top: 50%;
+          transform: translateY(-50%);
         }
     }
 </style>
