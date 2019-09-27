@@ -1,13 +1,12 @@
 <template>
   <div id="home">
-    <div class="main">
-      home
-    </div>
+    <top-menu/>
+    home
   </div>
 </template>
 
 <script>
-
+import topMenu from '@/navMenu/components/topMenu.vue';
 export default {
   name: 'home',
   data() {
@@ -15,14 +14,12 @@ export default {
 
     };
   },
-  components: {},
+  components: {
+    topMenu,
+  },
   created() {},
 };
 </script>
 
 <style lang="scss" scoped>
-  #home {
-    width: 100%;
-    height: 100%;
-  }
 </style>
