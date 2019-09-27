@@ -3,7 +3,9 @@
     <horizontal-menu/>
     <vertical-menu/>
     <keep-alive>
-      <router-view></router-view>
+      <div class="main">
+        <router-view></router-view>
+      </div>
     </keep-alive>
     <music-player/>
   </div>
@@ -37,12 +39,22 @@
   };
 </script>
 
-<style>
+<style lang="scss">
   /* CSS */
   #app {
+    position: relative;
     width: 100%;
     height: 100%;
     background:#fff;
     overflow: hidden;
+    .main {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      box-sizing: border-box;
+      padding:50px 0 61px 200px;
+      top:0;
+      left:0;
+    }
   }
 </style>
