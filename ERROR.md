@@ -20,4 +20,6 @@ import './path/to/your/store'
 ```
 [主进程](src/main/index.js)
 
+注意：electron项目中如果你使用了vuex-electron的插件，请在render渲染进程中调用dispatch或mapActions。不要使用commit，因为通过commit触发的操作不会在进程之间共享，所以electron-vue项目中，尽量不要在组件里或其他渲染进程文件里直接commit提交修改请求到mutations。
+
 PS：如果项目没有多进程交互的需求，可以直接不引入这个插件
