@@ -49,24 +49,6 @@
             <i class="el-icon-star-off"></i>
             <span slot="title">我的收藏</span>
           </el-menu-item>
-          <!-- <el-submenu index="1">
-            <template slot="title">
-              <i class="el-icon-location"></i>
-              <span>发现音乐</span>
-            </template>
-            <el-menu-item-group>
-              <template slot="title">分组一</template>
-              <el-menu-item index="1-1">选项1</el-menu-item>
-              <el-menu-item index="1-2">选项2</el-menu-item>
-            </el-menu-item-group>
-            <el-menu-item-group title="分组2">
-              <el-menu-item index="1-3">选项3</el-menu-item>
-            </el-menu-item-group>
-            <el-submenu index="1-4">
-              <template slot="title">选项4</template>
-              <el-menu-item index="1-4-1">选项1</el-menu-item>
-            </el-submenu>
-          </el-submenu> -->
         </el-menu>
       </el-col>
     </el-row>
@@ -110,12 +92,15 @@ export default {
     background-color: #EDEDED;
     z-index: 1;
     .el-menu-item {
-      font-size: 16px;
+      font-size: 14px;
       font-weight: 800;
       height: 36px;
       line-height: 36px;
       &:hover {
         background-color:rgb(231, 231, 231) !important;
+      }
+      i {
+        color:inherit;
       }
     }
     .is-active {
