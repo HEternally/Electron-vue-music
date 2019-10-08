@@ -121,8 +121,6 @@ export function playlistSimi (params) {
 };
 
 // 获取每日推荐歌单
-export function playlistRecommend (params) {
-  return request.get('/recommend/resource', {
-    params,
-  });
+export function playlistRecommend () {
+  return request.get('/recommend/resource');
 };
