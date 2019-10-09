@@ -55,6 +55,8 @@
       padding:50px 0 61px 200px;
       top:0;
       left:0;
+      overflow-x: hidden;
+      overflow-y: auto;
     }
   }
 </style>
