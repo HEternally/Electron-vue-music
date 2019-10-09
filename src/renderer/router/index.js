@@ -31,6 +31,11 @@ const router = new Router({
       name: 'friends',
       component: () => import(/* webpackChunkName: "friends" */ '@/views/friends/index.vue'),
     },
+    {
+      path: '/playlist',
+      name: 'playlist',
+      component: () => import(/* webpackChunkName: "playlist" */ '@/views/playList/index.vue'),
+    },
   ],
 });
 
