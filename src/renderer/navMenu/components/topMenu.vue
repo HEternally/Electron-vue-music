@@ -47,7 +47,7 @@ export default {
 
 <style lang="scss" scoped>
   .topMenu {
-    position: absolute;
+    position: fixed;
     top:25px;
     transform:translateY(-50%);
     z-index: 3;
