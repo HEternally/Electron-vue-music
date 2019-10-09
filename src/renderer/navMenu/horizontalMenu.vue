@@ -68,7 +68,7 @@ export default {
         background: linear-gradient(#f9f9f9,#f5f5f5);
         padding-left: 200px;
         -webkit-app-region: drag;
-        z-index: 2;
+        z-index: 3;
         .historyButton {
           position: absolute;
           left: 150px;
