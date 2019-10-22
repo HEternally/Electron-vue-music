@@ -96,6 +96,7 @@ export default {
       font-weight: 800;
       height: 36px;
       line-height: 36px;
+      background-color: #E2E2E2;
       &:hover {
         background-color:rgb(231, 231, 231) !important;
       }
