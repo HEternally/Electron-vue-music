@@ -82,6 +82,8 @@ export default {
             width: 130px;
             height: 130px;
             border-radius: 5px;
+            box-shadow:0px 0px 10px #333333;
+            box-sizing: border-box;
           }
           .playCount {
             position: absolute;
