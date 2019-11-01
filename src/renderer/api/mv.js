@@ -8,7 +8,8 @@ import request from '@/utils/request.js';
 // offset: 偏移数量 , 用于分页 , 如 :( 页数 -1)*50, 其中 50 为 limit 的值 , 默认 为 0
 
 // 获取全部mv
-export function getAllMv ({area = '全部', type = '全部', order = '上升最快', limit = 30, offset = 0}) {
+let area = '全部',type = '全部',order = '上升最快',limit = 30,offset = 0;
+export function getAllMv () {
   return request.get('/mv/all', {
     params: {
       area,
