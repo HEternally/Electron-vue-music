@@ -50,7 +50,7 @@ export default {
     position: fixed;
     top:25px;
     transform:translateY(-50%);
-    z-index: 3;
+    z-index: 13;
     a {
         color:#646464;
         text-decoration: none;
