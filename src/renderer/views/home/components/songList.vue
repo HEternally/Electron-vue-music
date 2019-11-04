@@ -55,6 +55,7 @@ export default {
   }
   .compontList {
     .title {
+      display:inline-block;
       color: #000;
       font-weight: 900;
       font-size: 18px;
@@ -66,7 +67,7 @@ export default {
         li {
           position: relative;
           display: inline-block;
-          width: 130px;
+          width: 18%;
           margin-top: 6px;
           margin-right: 18px;
           font-size: 13px;
@@ -79,8 +80,8 @@ export default {
             margin-top: 81px;
           }
           img {
-            width: 130px;
-            height: 130px;
+            width: 100%;
+            // height: 130px;
             border-radius: 5px;
             box-shadow:0px 0px 10px #333333;
             box-sizing: border-box;
