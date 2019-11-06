@@ -49,6 +49,7 @@ export default {
 
 <style lang="scss" scoped>
 #songList {
+  padding-bottom: 103px;
   .topList {
     color: #000;
     font-weight: 800;
