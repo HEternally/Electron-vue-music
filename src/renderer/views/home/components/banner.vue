@@ -30,6 +30,7 @@ export default {
         this.$electron.shell.openExternal(url);
       } else {
         // 点击banner其他操作
+        // this.$store.commit('Counter/INCREMENT_MAIN_COUNTER');
       }
     },
   },
