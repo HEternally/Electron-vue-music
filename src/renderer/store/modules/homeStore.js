@@ -1,6 +1,7 @@
 const state = {
   banners: [], // Home/banner
   personglizedPlaylist: [], // Home/songList
+  getPersonalizedPrivatecontent: [], // 独家放送
 };
 
 const getters = {
@@ -14,6 +15,9 @@ const mutations = {
   },
   SET_PLAYLIST(state, playlist) {
     state.personglizedPlaylist = playlist;
+  },
+  SET_CONTENT(state, content) {
+    state.getPersonalizedPrivatecontent = content;
   },
 };
 
