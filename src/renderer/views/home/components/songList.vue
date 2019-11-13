@@ -5,7 +5,7 @@
       <div class="title" @click="goSongList">推荐歌单<i class="el-icon-arrow-right"></i></div>
       <div class="card">
         <ul>
-          <li v-for="(item, index) in personglizedPlaylist" :key="index" :data-id="item.id" @click="goPlayList(item.id)">
+          <li v-for="(item, index) in personglizedPlaylist" :key="index" @click="goPlayList(item.id)">
             <img :src="item.picUrl" :alt="item.alg">
             <i class="el-icon-caret-right play"></i>
             <div class="playCount"><i class="el-icon-video-play"></i>{{item.playCount > 100000 ? Math.floor(item.playCount / 10000) + '万' : item.playCount}}</div>
