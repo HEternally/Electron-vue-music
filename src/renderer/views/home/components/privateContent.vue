@@ -33,6 +33,7 @@ export default {
 
 <style lang="scss" scoped>
   #privateContent {
+    padding-bottom: 103px;
     .title {
       display:inline-block;
       color: #000;
