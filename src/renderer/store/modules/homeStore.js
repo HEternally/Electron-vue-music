@@ -4,10 +4,10 @@ const state = {
   getPersonalizedPrivatecontent: [], // 独家放送
 };
 
-const getters = {
-  banners: state => state.banners,
-  personglizedPlaylist: state => state.personglizedPlaylist,
-};
+// const getters = {
+//   banners: state => state.banners,
+//   personglizedPlaylist: state => state.personglizedPlaylist,
+// };
 
 const mutations = {
   SET_BANNERS(state, banners) {
@@ -24,6 +24,6 @@ const mutations = {
 export default {
   namespaced: true,
   state,
-  getters,
+  // getters,
   mutations,
 };
