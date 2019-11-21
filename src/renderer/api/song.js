@@ -29,11 +29,9 @@ export function getLyric (params) {
   });
 };
 
-// 新歌速递 最新音乐
-export function getTopSong (params) {
-  return request.get('/top/song', {
-    params,
-  });
+// 新歌速递/最新音乐
+export function getTopSong (type) {
+  return request.get('/top/song?type=' + type);
 };
 
 // 获取歌曲详情
